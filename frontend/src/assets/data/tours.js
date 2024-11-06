@@ -37,11 +37,15 @@ const tours = [
     reviews: [
       {
         name: "jhon doe",
-        rating: 4.6,
+        rating: 4.5,
       },
       {
         name: "jhon doe",
         rating: 5,
+      },
+      {
+        name: "jhon doe",
+        rating: 4.7,
       },
     ],
     avgRating: 4.5,
