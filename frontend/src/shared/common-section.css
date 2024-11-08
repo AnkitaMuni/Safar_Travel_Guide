@@ -1,1 +1,66 @@
- 
+/* .common_section {
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url("../assets/images/tour.jpg") no-repeat center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+}
+
+.common_section h1 {
+    font-size: 2.5rem;
+    color: #fff;
+} */
+
+.common_section {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+}
+
+.common_section.slide-0 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../assets/images/tour.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.common_section.slide-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../assets/images/pexels-pixabay-147411.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.common_section.slide-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../assets/images/pexels-tomas-malik-793526-1998439.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.common_section h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
