@@ -23,6 +23,7 @@
   text-align: center;
   position: relative;
   transition: background-image 1s ease-in-out;
+  margin-top: 25px;
 }
 
 .common_section.slide-0 {

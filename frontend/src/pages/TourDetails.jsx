@@ -7,6 +7,8 @@ import calculateAvgRating from '../utils/avgRtating';
 import avatar from "../assets/images/avatar.jpg"
 import { useState } from 'react';
 import Bookings from '../components/Booking/Bookings';
+import Newsletter from "./../shared/Newsletter";
+
 
 const TourDetails = () => {
 
@@ -46,7 +48,7 @@ const TourDetails = () => {
             <span className='tour_rating d-flex align-items-center gap-1'>
               <i class="ri-star-fill" 
               style={{color:"var(--secondary-color)" }}></i>
-              {calculateAvgRating==0?null:avgRating}
+              {avgRating ===0?null:avgRating}
               {totalRating==0?(
               'Not rated'    
               ) : (
@@ -124,11 +126,13 @@ const TourDetails = () => {
         </Col>
 
         <Col lg='4'>
-            <Bookings tour={tour} />
+            <Bookings tour={tour} avgRating={avgRating} />
         </Col>
       </Row>
     </Container>
   </section>
+  <Newsletter />
+
   </>
   );
 };
