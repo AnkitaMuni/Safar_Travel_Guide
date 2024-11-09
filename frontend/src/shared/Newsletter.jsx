@@ -10,18 +10,18 @@ const Newsletter = () => {
         <Container>
             <Row>
                 <Col lg='6'>
-                    <div className="newsletter_content">
+                    <div className="newsletter__content">
                         <h2>Subscribe now to get useful traveling information</h2>
-                        <div className="newsletter_input">
+                        <div className="newsletter__input">
                             <input type="email" placeholder='Enter your email' />
-                            <button className="btn newsletter_btn">Subscribe</button>
+                            <button className="btn newsletter__btn">Subscribe</button>
                         </div>
 
                         <p>Sign up now to receive the latest travel tips, exclusive deals, and inspiring stories. Be the first to know about new destinations, cultural insights, and practical advice. Join our community of globetrotters and embark on your next adventure.</p>
                     </div>
                 </Col>
                 <Col lg='6'>
-                    <div className="newsletter_img">
+                    <div className="newsletter__img">
                         <img src={maleTourist} alt="" />
                     </div>
                 </Col>

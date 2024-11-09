@@ -2,9 +2,9 @@ import React from 'react';
 import './footer.css';
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo-top.png';
 
-const quick_links=[
+const quick__links=[
   {
     path:"/home",
     display:"Home",
@@ -19,7 +19,7 @@ const quick_links=[
   },
 ];
 
-const quick_links2=[
+const quick__links2=[
   {
     path:"/gallery",
     display:"Gallery",
@@ -45,8 +45,8 @@ const Footer = () => {
           <Col lg='3'>
             <div className="logo">
               <img src={logo} alt="" />
-              <p>Experience the world with Travel World. Our expert team is here to help you plan and book your dream vacation.</p>
-              <div className="social_links d-flex align-items-center gap-4"></div>
+              <p>Begin your next journey</p>
+              <div className="social__links d-flex align-items-center gap-4"></div>
               <span>
                 <Link to='#'>
                   <i class='ri-youtube-line'></i>
@@ -70,11 +70,11 @@ const Footer = () => {
             </div>
           </Col>
           <Col lg='3'>
-            <h5 className='footer_link-title'>Discover</h5>
-            <ListGroup className="footer_quick-links">
+            <h5 className='footer__link-title'>Discover</h5>
+            <ListGroup className="footer__quick-links">
               {
-                quick_links.map((item, index)=>(
-                  <ListGroupItem key={index} className='ps-0 bprder-0'>
+                quick__links.map((item, index)=>(
+                  <ListGroupItem key={index} className='ps-0 border-0'>
                     <Link to={item.pathk}>{item.display}</Link>
                   </ListGroupItem>
                 ))
@@ -82,11 +82,11 @@ const Footer = () => {
             </ListGroup>
           </Col>
           <Col lg='3'>
-          <h5 className='footer_link-title'>Quick Links</h5>
-            <ListGroup className="footer_quick-links">
+          <h5 className='footer__link-title'>Quick Links</h5>
+            <ListGroup className="footer__quick-links">
               {
-                quick_links2.map((item, index)=>(
-                  <ListGroupItem key={index} className='ps-0 bprder-0'>
+                quick__links2.map((item, index)=>(
+                  <ListGroupItem key={index} className='ps-0 border-0'>
                     <Link to={item.pathk}>{item.display}</Link>
                   </ListGroupItem>
                 ))
@@ -94,9 +94,9 @@ const Footer = () => {
             </ListGroup>
           </Col>
           <Col lg='3'>
-          <h5 className='footer_link-title'>Contact</h5>
-            <ListGroup className="footer_quick-links">
-                  <ListGroupItem  className='ps-0 bprder-0 d-flex align-items-center gap-3'>
+          <h5 className='footer__link-title'>Contact</h5>
+            <ListGroup className="footer__quick-links">
+                  <ListGroupItem  className='ps-0 border-0 d-flex align-items-center gap-3'>
                     <h6 className='mb-0 d-flex align-items-center gap-2'>
                       <span>
                         <i class="ri-map-pin-line"></i>
@@ -106,7 +106,7 @@ const Footer = () => {
                     <p className='mb-0'>Bengaluru, Karnataka</p>
                   </ListGroupItem>
 
-                  <ListGroupItem  className='ps-0 bprder-0 d-flex align-items-center gap-3'>
+                  <ListGroupItem  className='ps-0 border-0 d-flex align-items-center gap-3'>
                     <h6 className='mb-0 d-flex align-items-center gap-2'>
                       <span>
                         <i class="ri-mail-line"></i>
@@ -116,7 +116,7 @@ const Footer = () => {
                     <p className='mb-0'>example@gmail.com</p>
                   </ListGroupItem>
 
-                  <ListGroupItem  className='ps-0 bprder-0 d-flex align-items-center gap-3'>
+                  <ListGroupItem  className='ps-0 border-0 d-flex align-items-center gap-3'>
                     <h6 className='mb-0 d-flex align-items-center gap-2'>
                       <span>
                         <i class="ri-phone-fill"></i>

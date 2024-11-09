@@ -14,7 +14,7 @@
     color: #fff;
 } */
 
-.common_section {
+.common__section {
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -23,25 +23,26 @@
   text-align: center;
   position: relative;
   transition: background-image 1s ease-in-out;
-  margin-top: 25px;
+  margin-top: 5%;
 }
 
-.common_section.slide-0 {
+
+.common__section.slide-0 {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../assets/images/tour.jpg') no-repeat center center;
   background-size: cover;
 }
 
-.common_section.slide-1 {
+.common__section.slide-1 {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../assets/images/pexels-pixabay-147411.jpg') no-repeat center center;
   background-size: cover;
 }
 
-.common_section.slide-2 {
+.common__section.slide-2 {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../assets/images/pexels-tomas-malik-793526-1998439.jpg') no-repeat center center;
   background-size: cover;
 }
 
-.common_section h1 {
+.common__section h1 {
   font-size: 2.5rem;
   color: #fff;
 }

@@ -37,19 +37,19 @@ const TourDetails = () => {
     <Container>
       <Row>
         <Col lg='8'>
-        <div className="tour_content">
+        <div className="tour__content">
           <img src={photo} alt=" "/>
           
-          <div className='tour_info'>
+          <div className='tour__info'>
             <h2>{title}</h2>
 
             <div className="d-flex align-items-center gap-5">
 
-            <span className='tour_rating d-flex align-items-center gap-1'>
+            <span className='tour__rating d-flex align-items-center gap-1'>
               <i class="ri-star-fill" 
               style={{color:"var(--secondary-color)" }}></i>
               {avgRating ===0?null:avgRating}
-              {totalRating==0?(
+              {totalRating===0?(
               'Not rated'    
               ) : (
                   <span>({reviews.length})</span>
@@ -61,8 +61,8 @@ const TourDetails = () => {
             </div>
             <div className='tour__extra-details'>
               <span><i class="ri-map-pin-2-line"></i>{city}</span>
-              <span><i class="ri-wallet-3-line"></i> Rs. {price} /Per Person </span>
-              <span><i class="ri-map-pin-time-line"></i> {distance} k/m </span>
+              <span><i class="ri-wallet-3-line"></i> Rs. {price} /per Person </span>
+              <span><i class="ri-map-pin-time-line"></i> {distance} km </span>
               <span><i class="ri-group-line"></i> {maxGroupSize} people</span>
             </div>
             <h5>Description</h5>
@@ -70,7 +70,7 @@ const TourDetails = () => {
           </div>
           {/* ========= tour reviews section =========== */}
           <div className='tour__reviews mt-4'>
-            <h4>Reviews ({reviews ?. length} reviews)</h4>
+            <h4>Reviews ({reviews?.length} reviews)</h4>
 
             <Form onSubmit={submitHandler}>
               <div className='d-flex align-items-center gap-3 mb-4 rating__group'>
@@ -91,14 +91,14 @@ const TourDetails = () => {
                 </span>
               </div>
               <div className='review__input'>
-                <input type='text' ref={reviewMsgRef} placeholder='share your thoughts' required/>
+                <input type='text' ref={reviewMsgRef} placeholder='Share your thoughts' required/>
                 <button 
                 className='btn primary__btn text-white' type='submit'>Submit</button>
               </div>
             </Form>
             <ListGroup className='user__reviews'>
               {
-                reviews ?.map(reviews =>(
+                reviews?.map(reviews =>(
                   <div className='review__item'>
                     <img src={avatar} alt=''/>
                     <div className='w-100'>

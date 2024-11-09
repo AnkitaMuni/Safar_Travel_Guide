@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&family=Titillium+Web:wght@200;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 :root {
   --primary-color: #ff7e01;
   --secondary-color: #faa935;
+  --tertiary-color: #ee6e6e;
+  --logo-text-color: #402612;
   --heading-color: #0b2727;
   --text-color: #6e7074;
   --font-name: "Montserrat", sans-serif;
-  --subtitle-font-name: "Island Moments", cursive;
+  --subtitle-font-name: "Patua One", serif;
 }
 
 * {

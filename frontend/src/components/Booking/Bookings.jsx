@@ -37,7 +37,7 @@ const Bookings = ({tour,avgRating}) => {
       <h3>Rs.{price}<span>/Per person</span></h3>
       <span className='tour__rating d-flex align-items-center gap-1'>
         <i class="ri-star-fill" style={{color:"var(--secondary-color)" }}></i>
-        {avgRating ===0?null:avgRating} ({reviews ?.length})                     
+        {avgRating ===0?null:avgRating} ({reviews?.length})                     
       </span>
     </div>
     {/* ====================Booking form ================= */}

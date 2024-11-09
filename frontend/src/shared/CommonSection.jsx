@@ -34,7 +34,7 @@ const CommonSection = ({ title }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -45,7 +45,7 @@ const CommonSection = ({ title }) => {
   };
 
   return (
-    <section className={`common_section slide-${currentIndex}`}>
+    <section className={`common__section slide-${currentIndex}`}>
       <div className="container">
         <h1>{title}</h1>
       </div>
