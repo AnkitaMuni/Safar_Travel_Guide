@@ -113,7 +113,7 @@ const tours = [
   {
     id: "05",
     title: "Danteshwari Temple",
-    city: "Chattisgargh",
+    city: "Chattisgarh",
     distance: 500,
     address: "Danteshwari Temple, Dantewada, Chattisgarh, India",
     price: 99,
