@@ -25,6 +25,7 @@
 .tour__info span i {
     color: var(--heading-color);
     font-size: 1.1rem;
+    padding-right: 5px;
 }
 
 .tour__extra-details {
@@ -33,6 +34,10 @@
     column-gap: 2.7rem;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
+}
+
+.tour__extra-details span i{
+    padding-right: 5px;
 }
 
 .tour__info h5 {
@@ -121,3 +126,18 @@
 }
 
 
+@media only screen and (max-width:768px){
+
+    .tour__extra-details{
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+    .tour__extra-details span{
+        font-size: 0.9rem;
+    }
+
+    .tour__extra-details span i{
+        font-size: 1rem;
+    }
+}

@@ -41,7 +41,7 @@ const Home = () => {
           </Col>
 
           <Col lg='2'>
-            <div className="hero__img-box mt-4">
+            <div className="hero__img-box hero__video-box mt-4">
               <video src={heroVideo} alt="" controls autoPlay muted/>
             </div>
           </Col>
@@ -89,7 +89,7 @@ const Home = () => {
             <Col lg='6'>
               <div className="experience__content">
                 <Subtitle subtitle={'Experience'}/>
-                <br/><br/><br/>
+                <br/>
                 <p>From personalized itineraries to expert local guides, we've <br/>got you covered. Let us handle the details, so you can focus<br/> on creating unforgettable memories.</p>
               </div>
 

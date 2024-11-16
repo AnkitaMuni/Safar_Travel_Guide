@@ -68,5 +68,19 @@
     text-align: center;
 }
 
+@media only screen and (max-width:768px){
+    .login__img{
+        display:none;
+    }
 
+    .login__form{
+        width:70%;
+        margin: auto;
+    }
+
+    .login_container{
+        padding-bottom: 3rem;
+    }
+
+}
 
