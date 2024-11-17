@@ -28,6 +28,16 @@ const bookingSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
+    tourId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Tour', 
+      required: true,
+    },
+    photo: {
+      type: String,
+      required: true,
+    },
+
   },
   { timestamps: true }
 );

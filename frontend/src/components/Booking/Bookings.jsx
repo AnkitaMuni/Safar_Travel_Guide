@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthContext'
 import { BASE_URL } from '../../utils/config'
 
 const Bookings = ({tour,avgRating}) => {
-  const {price,reviews, title} = tour
+  const {_id, price,reviews, title, photo} = tour
   const navigate = useNavigate()
 
   const {user} = useContext(AuthContext)
@@ -19,7 +19,9 @@ const Bookings = ({tour,avgRating}) => {
     fullName:'',
     phone:'',
     guestSize:1,
-    bookAt:''
+    bookAt:'',
+    tourId: _id,
+    photo:photo,
   })
 
   const handleChange = e => {

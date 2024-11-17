@@ -15,6 +15,7 @@ import { AuthContext } from './../context/AuthContext'
 const TourDetails = () => {
 
   const {id} =useParams()
+  console.log(id)
   const reviewMsgRef =useRef('')
   const [tourRating,setTourRating]=useState(null)
   const {user} = useContext(AuthContext)
@@ -172,7 +173,7 @@ const TourDetails = () => {
             </Col>
 
             <Col lg='4'>
-                <Bookings tour={tour} avgRating={avgRating} />
+                <Bookings tour={tour} avgRating={avgRating}/>
             </Col>
           </Row>
         }

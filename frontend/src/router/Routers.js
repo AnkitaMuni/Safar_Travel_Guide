@@ -10,6 +10,7 @@ import Login from './../pages/Login';
 import Register from './../pages/Register';
 import SearchResultList from './../pages/SearchResultList';
 import ThankYou from '../pages/ThankYou';
+import Dashboard from '../pages/Dashboard';
 
 const Routers = () => {
   return (
@@ -22,7 +23,7 @@ const Routers = () => {
         <Route path='/register' element={<Register/>} />
         <Route path='/thank-you' element={<ThankYou/>} />
         <Route path='/tours/search/getTourBySearch' element={<SearchResultList/>} />
-
+        <Route path='/dashboard' element={<Dashboard/>} />
     </Routes>
   )
 }

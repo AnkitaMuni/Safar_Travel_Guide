@@ -1,0 +1,81 @@
+.booking-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-details {
+    flex: 1;
+    max-width: 60%;
+  }
+  
+  .booking-info {
+    margin-bottom: 20px;
+  }
+  
+  .tour__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .tour__location,
+  .tour__rating,
+  .tour__phone {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .booking-date {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .booking-image {
+    flex: 1;
+    max-width: 35%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .booking-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .booking-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  /* Adjust layout for large screens (2 bookings per row) */
+  @media (min-width: 768px) {
+    .booking-card {
+      flex-direction: row;
+    }
+  
+    .booking-details {
+      margin-right: 20px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .booking-card {
+      flex-direction: column;
+    }
+  
+    .booking-details {
+      margin-bottom: 15px;
+    }
+  
+    .booking-image {
+      margin-top: 10px;
+    }
+  }
+  

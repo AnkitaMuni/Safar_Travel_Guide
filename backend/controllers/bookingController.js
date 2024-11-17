@@ -55,3 +55,27 @@ export const getAllBooking = async(req, res)=>{
         })
     }
 }
+
+// Get bookings by user ID
+export const getBookingsByUser = async (req, res) => {
+    const { id } = req.params; // Extract user ID from params
+    try {
+      const userBookings = await Booking.find({ userId: id }) // Query bookings by userId
+      if (!userBookings || userBookings.length === 0) {
+        return res.status(404).json({
+          success: false,
+          message: "No bookings found for this user",
+        });
+      }
+      res.status(200).json({
+        success: true,
+        message: "Successful",
+        data: userBookings,
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: "Internal Server Error",
+      });
+    }
+  }

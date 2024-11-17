@@ -84,7 +84,8 @@ const Header = () => {
 
                 {
                   user? <>
-                    <h5 className="mb-9" style={{ position:'relative', top: '3px'}}>{user.username}</h5>
+                    <NavLink to={"/dashboard"} className={navClass=> navClass.isActive ? "active__link" : "" } style={{textDecoration: 'none'}}>{user.username}</NavLink>
+                    {/*<h5 className="mb-9" style={{ position:'relative', top: '3px'}}>{user.username}</h5>*/}
                     <Button className="btn btn-dark" onClick={logout}>Logout</Button>
                   </> : <>
                     <Button className="btn secondary__btn button-background"><Link to='/login'>Login</Link></Button>

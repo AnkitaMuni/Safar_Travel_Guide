@@ -13,12 +13,19 @@ const useFetch = (url)=>{
             try{
                 const res = await fetch(url)
 
-                if(!res.ok){
-                    setError("Failed to fetch")
+                if (!res.ok) {
+                    if (res.status === 404) {
+                      setData([]);
+                    } else {
+                      setError("Failed to fetch");
+                    }
                 }
 
                 const result = await res.json()
-                setData(result.data)
+                console.log(result)
+                if (result?.data) {
+                    setData(result.data);
+                }
                 setLoading(false)
 
             } catch (err) {
