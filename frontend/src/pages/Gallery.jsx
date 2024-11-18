@@ -2,7 +2,7 @@ import React from 'react';
 import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGallery';
 import { Container, Row, Col } from 'reactstrap';
 import Subtitle from './../shared/Subtitle';
-// import '../styles/gallery.css';
+
 
 const Gallery = () => {
     return (
