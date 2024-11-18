@@ -14,13 +14,16 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="team">
+    <div className="profiles">
+      
+
       {teamMembers.map((member, index) => (
-        <div className="team__card" key={index}>
-          <img src={member.image} alt={member.name} className="team__image" />
-          <h3>{member.name}</h3>
-          <p>{member.role}</p>
-          <button className="team__button">+</button>
+        <div class="profile" key={index}>
+          <div class="profile__img">
+            <img src={member.image} alt={member.name} />
+          </div>
+          <h3 class="profile__name">{member.name}</h3>
+          <p class="profile__subtitle">{member.role}</p>
         </div>
       ))}
     </div>

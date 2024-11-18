@@ -126,7 +126,7 @@ const Home = () => {
           <Row>
             <Col lg='12'>
               <Subtitle subtitle={'Gallery'}/>
-              <h2 className="gallery__title">Visit our customers tour gallery</h2>
+              <h2 className="gallery__title">Our customers' tour gallery</h2>
             </Col>
             <Col lg='12'>
               <MasonryImagesGallery/>

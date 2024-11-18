@@ -1,57 +1,86 @@
 .about {
-    font-family: Arial, sans-serif;
-    color: #2c3e50;
-  }
-  
-  .about__header {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 2rem;
-    background-color: #f9f9f9;
-  }
-  
-  .about__header-content {
-    display: flex; 
-    width: 100%; 
-    gap: 1rem; 
-  }
-  
-  .about__header-left {
-    flex: 1; 
-    text-align: left;
-  }
-  
-  .about__header-left h1 {
-    font-size: 2.5em;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
-  
+  font-family: var(--font-name);
+  color: var(--text-color);
+}
 
-  .about__image img {
-    width: 100%;
-    max-width: 1000px; 
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-  }
-  
-  .about__team {
+.about__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.about__header-content {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.about__header-left {
+  flex: 1;
+  text-align: left;
+}
+
+.about__header-left h1 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: var(--heading-color);
+}
+
+.about__image img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.about__team {
+  text-align: center;
+  padding: 2rem;
+}
+
+.about__team h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+}
+
+.about__team p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 992px) {
+  .about__header {
+    flex-direction: column;
     text-align: center;
-    padding: 2rem;
-    background-color: #ffffff;
+    padding: 1.5rem;
   }
-  
-  .about__team h2 {
+
+  .about__header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about__header-left h1 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
   }
-  
+
+  .about__team {
+    padding: 1.5rem;
+  }
+
+  .about__team h2 {
+    font-size: 1.5rem;
+  }
+
   .about__team p {
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
+}

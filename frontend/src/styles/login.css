@@ -68,6 +68,10 @@
     text-align: center;
 }
 
+.login__form a{
+    color: #fff;
+}
+
 @media only screen and (max-width:768px){
     .login__img{
         display:none;

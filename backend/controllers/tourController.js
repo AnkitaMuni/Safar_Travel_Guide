@@ -103,18 +103,14 @@ export const getAllTour= async(req,res)=>{
 //get tour by search
 export const getTourBySearch = async(req,res)=>{
 
-    //here 'i' means case sensitive
-    const city= new RegExp(req.query.city, 'i') 
-    const distance = parseInt(req.query.distance)
-    const maxGroupSize = parseInt(req.query.maxGroupSize)
+    //here 'i' means case insensitive
+    const address= new RegExp(req.query.address, 'i') 
 
     try{
 
         //gte is greater than equal
         const tours = await Tour.find({
-            city, 
-            distance:{$gte:distance}, 
-            maxGroupSize:{$gte:maxGroupSize}
+            address, 
         }).populate('reviews')
 
         res.status(200).json({
