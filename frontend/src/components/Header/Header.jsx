@@ -20,6 +20,10 @@ const nav__links = [
   {
     path: '/tours',
     display: 'Tours'
+  },
+  {
+    path: '/gallery',
+    display: 'Gallery'
   }
 ];
 
