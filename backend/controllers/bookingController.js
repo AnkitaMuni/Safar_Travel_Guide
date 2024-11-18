@@ -79,3 +79,28 @@ export const getBookingsByUser = async (req, res) => {
       });
     }
   }
+
+
+  // Delete booking
+export const deleteBooking = async (req, res) => {
+  const { id } = req.params; // Extract booking ID from params
+  try {
+    const deletedBooking = await Booking.findByIdAndDelete(id);
+    if (!deletedBooking) {
+      return res.status(404).json({
+        success: false,
+        message: "Booking not found",
+      });
+    }
+    res.status(200).json({
+      success: true,
+      message: "Booking deleted successfully",
+      data: deletedBooking,
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+};

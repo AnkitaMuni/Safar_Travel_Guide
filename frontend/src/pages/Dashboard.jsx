@@ -6,6 +6,7 @@ import useFetch from '../hooks/useFetch';
 import { AuthContext } from './../context/AuthContext';
 import { NavLink } from 'react-router-dom';  // Add this import
 import '../styles/dashboard.css';
+import axios from 'axios'
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
@@ -18,7 +19,19 @@ const Dashboard = () => {
   // Format date
   const options = { day: "numeric", month: "long", year: "numeric" };
 
+  const handleDelete = async (bookingId) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this booking?");
+    if (!confirmDelete) return;
   
+    try {
+      await axios.delete(`${BASE_URL}/booking/${bookingId}`);
+      alert("Booking deleted successfully!");
+      window.location.reload();
+    } catch (error) {
+      console.error("Error deleting booking:", error);
+      alert("Failed to delete booking. Please try again.");
+    }
+  };
 
   return (
     <>
@@ -39,7 +52,24 @@ const Dashboard = () => {
                     <div className="booking-details">
                       <div className="booking-info">
                         <h5 className="tour__title">
-                          <NavLink to={`/tours/${booking.tourId}`} className={navClass=> navClass.isActive ? "active__link" : "" }style={{textDecoration: 'none'}}>{booking.tourName}</NavLink> 
+                          <NavLink
+                            to={`/tours/${booking.tourId}`}
+                            className={(navClass) => (navClass.isActive ? "active__link" : "")}
+                            style={{ textDecoration: "none", marginRight: "10px" }}
+                          >
+                            {booking.tourName}
+                          </NavLink>
+                          <span
+                            className="delete-link text-danger"
+                            style={{
+                              cursor: "pointer",
+                              fontSize: "0.9rem",
+                              marginLeft: "5px",
+                            }}
+                            onClick={() => handleDelete(booking._id)}
+                          >
+                            Delete
+                          </span>
                         </h5>
                         <p className="tour__location">
                           <i className="ri-user-line"></i> {booking.fullName}
@@ -57,7 +87,7 @@ const Dashboard = () => {
                     </div>
                     <div className="booking-image">
                       <img
-                        src={booking.photo || 'https://via.placeholder.com/300x200'}
+                        src={booking.photo || "https://via.placeholder.com/300x200"}
                         alt={booking.tourName}
                       />
                     </div>
@@ -65,7 +95,7 @@ const Dashboard = () => {
                   <hr className="booking-divider" />
                 </Col>
               ))}
-            </Row>
+            </Row>          
           )}
         </Container>
       </section>

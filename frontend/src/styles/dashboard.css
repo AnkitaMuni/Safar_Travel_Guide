@@ -53,6 +53,20 @@
     border-top: 1px solid #ddd;
     margin: 20px 0;
   }
+
+  .delete-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #e60000;
+  }
   
   /* Adjust layout for large screens (2 bookings per row) */
   @media (min-width: 768px) {

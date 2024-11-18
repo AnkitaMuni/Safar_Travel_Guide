@@ -7,7 +7,11 @@ const tourSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    city: {
+    start: {
+      type: String,
+      required: true,
+    },
+    end: {
       type: String,
       required: true,
     },
@@ -24,7 +28,7 @@ const tourSchema = new mongoose.Schema(
       required: true,
     },
     desc: {
-      type: String,
+      type: [String],
       required: true,
     },
     price: {

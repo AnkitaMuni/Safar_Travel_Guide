@@ -1,13 +1,13 @@
 import React from 'react';
 import { Card, CardBody } from 'reactstrap';
 import {Link} from 'react-router-dom';
-import calculateAvgRating from '../utils/avgRtating';
+import calculateAvgRating from '../utils/avgRating';
 
 import './tour-card.css';
 
 const TourCard = ({tour}) => {
 
-    const {_id, title,city, photo, price, featured, reviews }=tour;
+    const {_id, title,address, photo, price, featured, reviews }=tour;
     const {totalRating, avgRating}=calculateAvgRating(reviews);
 
     console.log(_id)
@@ -22,7 +22,7 @@ const TourCard = ({tour}) => {
             <CardBody>
                 <div className="card__top d-flex align-items-center justify-content-between">
                     <span className='tour__location d-flex align-items-center gap-1'>
-                        <i className="ri-map-pin-line"></i>{city}
+                        <i className="ri-map-pin-line"></i>{address}
                     </span>
 
                     <span className='tour__rating d-flex align-items-center gap-1'>
