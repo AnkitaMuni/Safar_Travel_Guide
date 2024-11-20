@@ -1,9 +1,9 @@
 to execute....open two terminals
 
-first terminal:
-cd frontend
-npm i
-npm start
+first terminal:\n
+cd frontend\n
+npm i\n
+npm start\n
 
 second terminal:
 cd backend
