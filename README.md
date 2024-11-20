@@ -1,10 +1,15 @@
 to execute....open two terminals
 
-first terminal:\n
-cd frontend\n
-npm i\n
-npm start\n
+first terminal:
+
+cd frontend
+
+npm i
+
+npm start
 
 second terminal:
+
 cd backend
+
 npm run start-dev
